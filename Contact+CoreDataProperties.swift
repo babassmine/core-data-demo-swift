@@ -16,7 +16,7 @@ extension Contact {
 
     @NSManaged var name: String?
     @NSManaged var address: String?
-    @NSManaged var phone: UNKNOWN_TYPE
-    @NSManaged var status: UNKNOWN_TYPE
+    @NSManaged var phone: String?
+    @NSManaged var status: String?
 
 }
