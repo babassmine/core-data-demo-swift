@@ -41,11 +41,17 @@
                                 <rect key="frame" x="63" y="202" width="30" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Find"/>
+                                <connections>
+                                    <action selector="find:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aDf-kr-vNu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k1-uA-fZA">
                                 <rect key="frame" x="256" y="202" width="34" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HnZ-qq-tCB"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Mp-yg-lv0">
                                 <rect key="frame" x="131" y="28" width="211" height="30"/>
@@ -70,6 +76,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="addressField" destination="Vxr-X3-QvY" id="Ocn-Sj-th5"/>
+                        <outlet property="nameField" destination="7Mp-yg-lv0" id="0LT-nl-y3q"/>
+                        <outlet property="phoneField" destination="wjw-8o-vDv" id="XyL-Ke-kvA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
