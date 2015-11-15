@@ -49,6 +49,9 @@ class ViewController: UIViewController {
                 statusLabel.text = "Matches found: \(results.count)"
             } else {
                 statusLabel.text = "No Match Found!!"
+                nameField.text = ""
+                addressField.text = ""
+                phoneField.text = ""
             }
         } catch let error as NSError {
             statusLabel.text = error.localizedFailureReason
