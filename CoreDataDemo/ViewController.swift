@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
@@ -26,9 +29,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func find(sender: AnyObject) {
+        
     }
     
     @IBAction func save(sender: AnyObject) {
+        let entityDescription = NSEntityDescription.entityForName("Contact", inManagedObjectContext: managedObjectContext)
+        
+        let contact = Contact(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
+        contact.name = nameField.text
+        contact.address = addressField.text
+        contact.phone = phoneField.text
+        
+        do{
+            try managedObjectContext.save()
+            nameField.text = ""
+            addressField.text = ""
+            phoneField.text = ""
+            statusLabel.text = "Contact Saved"
+        }catch let error as NSError {
+            statusLabel.text = error.localizedFailureReason
+        }
     }
     
 
