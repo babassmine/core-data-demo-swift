@@ -15,6 +15,8 @@
 		CE983F671BF92ACF000C63FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE983F651BF92ACF000C63FB /* LaunchScreen.storyboard */; };
 		CE983F721BF92ACF000C63FB /* CoreDataDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983F711BF92ACF000C63FB /* CoreDataDemoTests.swift */; };
 		CE983F7D1BF92ACF000C63FB /* CoreDataDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983F7C1BF92ACF000C63FB /* CoreDataDemoUITests.swift */; };
+		CE983F8C1BF92B39000C63FB /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983F8A1BF92B39000C63FB /* Contact+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		CE983F8D1BF92B39000C63FB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983F8B1BF92B39000C63FB /* Contact.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CE983F781BF92ACF000C63FB /* CoreDataDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE983F7C1BF92ACF000C63FB /* CoreDataDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDemoUITests.swift; sourceTree = "<group>"; };
 		CE983F7E1BF92ACF000C63FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE983F8A1BF92B39000C63FB /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE983F8B1BF92B39000C63FB /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		CE983F4D1BF92ACF000C63FB = {
 			isa = PBXGroup;
 			children = (
+				CE983F8A1BF92B39000C63FB /* Contact+CoreDataProperties.swift */,
+				CE983F8B1BF92B39000C63FB /* Contact.swift */,
 				CE983F581BF92ACF000C63FB /* CoreDataDemo */,
 				CE983F701BF92ACF000C63FB /* CoreDataDemoTests */,
 				CE983F7B1BF92ACF000C63FB /* CoreDataDemoUITests */,
@@ -261,7 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE983F8C1BF92B39000C63FB /* Contact+CoreDataProperties.swift in Sources */,
 				CE983F5C1BF92ACF000C63FB /* ViewController.swift in Sources */,
+				CE983F8D1BF92B39000C63FB /* Contact.swift in Sources */,
 				CE983F621BF92ACF000C63FB /* CoreDataDemo.xcdatamodeld in Sources */,
 				CE983F5A1BF92ACF000C63FB /* AppDelegate.swift in Sources */,
 			);
