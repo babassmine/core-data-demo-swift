@@ -29,6 +29,30 @@ class ViewController: UIViewController {
     }
 
     @IBAction func find(sender: AnyObject) {
+        let entityDescription = NSEntityDescription.entityForName("Contact", inManagedObjectContext: managedObjectContext)
+        
+        let request = NSFetchRequest()
+        request.entity = entityDescription
+        
+        let pred = NSPredicate(format: "(name =%@)", nameField.text!)
+        request.predicate = pred
+        
+        do {
+            var results = try managedObjectContext.executeFetchRequest(request)
+            
+            if results.count > 0 {
+                let match = results[0] as! NSManagedObject
+                
+                nameField.text = match.valueForKey("name") as? String
+                addressField.text = match.valueForKey("address") as? String
+                phoneField.text = match.valueForKey("phone") as? String
+                statusLabel.text = "Matches found: \(results.count)"
+            } else {
+                statusLabel.text = "No Match Found!!"
+            }
+        } catch let error as NSError {
+            statusLabel.text = error.localizedFailureReason
+        }
         
     }
     
